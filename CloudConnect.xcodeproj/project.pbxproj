@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DAE651FF217A7053001E6A16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE651FE217A7053001E6A16 /* AppDelegate.swift */; };
-		DAE65201217A7053001E6A16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE65200217A7053001E6A16 /* ViewController.swift */; };
+		DAE65201217A7053001E6A16 /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE65200217A7053001E6A16 /* ServerViewController.swift */; };
 		DAE65204217A7053001E6A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE65202217A7053001E6A16 /* Main.storyboard */; };
 		DAE65206217A7055001E6A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE65205217A7055001E6A16 /* Assets.xcassets */; };
 		DAE65209217A7055001E6A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE65207217A7055001E6A16 /* LaunchScreen.storyboard */; };
 		DAE65214217B8BE2001E6A16 /* ServerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE65213217B8BE2001E6A16 /* ServerState.swift */; };
+		DAE65217217B8FF2001E6A16 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE65216217B8FF2001E6A16 /* API.swift */; };
+		DAE65219217B9A48001E6A16 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE65218217B9A48001E6A16 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAE651FB217A7053001E6A16 /* CloudConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE651FE217A7053001E6A16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAE65200217A7053001E6A16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAE65200217A7053001E6A16 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
 		DAE65203217A7053001E6A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE65205217A7055001E6A16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE65208217A7055001E6A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE6520A217A7055001E6A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAE65213217B8BE2001E6A16 /* ServerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerState.swift; sourceTree = "<group>"; };
+		DAE65216217B8FF2001E6A16 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DAE65218217B9A48001E6A16 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		DAE651F2217A7053001E6A16 = {
 			isa = PBXGroup;
 			children = (
+				DAE65218217B9A48001E6A16 /* Default-568h@2x.png */,
 				DAE65205217A7055001E6A16 /* Assets.xcassets */,
 				DAE6520A217A7055001E6A16 /* Info.plist */,
 				DAE651FD217A7053001E6A16 /* CloudConnect */,
@@ -78,8 +83,8 @@
 		DAE65211217A7E83001E6A16 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DAE65207217A7055001E6A16 /* LaunchScreen.storyboard */,
 				DAE65202217A7053001E6A16 /* Main.storyboard */,
+				DAE65207217A7055001E6A16 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,7 +92,7 @@
 		DAE65212217A7EE1001E6A16 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DAE65200217A7053001E6A16 /* ViewController.swift */,
+				DAE65200217A7053001E6A16 /* ServerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		DAE65215217B8FAF001E6A16 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DAE65216217B8FF2001E6A16 /* API.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE65209217A7055001E6A16 /* LaunchScreen.storyboard in Resources */,
+				DAE65219217B9A48001E6A16 /* Default-568h@2x.png in Resources */,
 				DAE65206217A7055001E6A16 /* Assets.xcassets in Resources */,
 				DAE65204217A7053001E6A16 /* Main.storyboard in Resources */,
 			);
@@ -170,8 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE65201217A7053001E6A16 /* ViewController.swift in Sources */,
+				DAE65201217A7053001E6A16 /* ServerViewController.swift in Sources */,
 				DAE65214217B8BE2001E6A16 /* ServerState.swift in Sources */,
+				DAE65217217B8FF2001E6A16 /* API.swift in Sources */,
 				DAE651FF217A7053001E6A16 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T98QB7DLD;
-				INFOPLIST_FILE = CloudConnect/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T98QB7DLD;
-				INFOPLIST_FILE = CloudConnect/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
