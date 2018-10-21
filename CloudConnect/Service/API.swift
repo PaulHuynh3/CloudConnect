@@ -10,7 +10,7 @@ import Foundation
 
 class API {
     
-    func fetchNewInterviewPackIds(page: Int, completion: @escaping (Array<ServerState>?, String?)->Void){
+    func fetchAllServerState(page: Int, completion: @escaping (Array<ServerState>?, String?)->Void){
         //https://45.55.43.15:9090/api/machine?page=0&size=10
         let baseUrl = "https://45.55.43.15:9090/api/machine?page=\(page)&size=10"
         let configuration = URLSessionConfiguration.default
