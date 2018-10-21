@@ -10,14 +10,15 @@ import UIKit
 
 class ServerViewController: UIViewController {
     var serverStateArray = Array<ServerState>()
-
+    var pageNumber = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveServerStateArray()
+        pageNumber = 0
+        retrieveServerStateArray(pageNumber: pageNumber)
     }
 
-    func retrieveServerStateArray() {
-        API().fetchAllServerState(page: 0) { (serverArray: Array<ServerState>?, error: String?) in
+    func retrieveServerStateArray(pageNumber: Int) {
+        API().fetchAllServerState(page: pageNumber) { (serverArray: Array<ServerState>?, error: String?) in
             if let error = error {
                 let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -48,8 +49,36 @@ extension ServerViewController: UITableViewDataSource, UITableViewDelegate {
         
         return customizedCell
     }
-    
-    
-    
 }
 
+//MARK: UIScrollViewDelegate
+extension ServerViewController {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            processScrollInScrollView(scrollView)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        processScrollInScrollView(scrollView)
+    }
+    
+    //determine end of page
+    func processScrollInScrollView(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
+        
+        if bottomEdge >= scrollView.contentSize.height {
+            //load next screen
+        } else {
+            
+        }
+    }
+    
+    func loadNextScreen(scrollView: UIScrollView) {
+        //bottom of screen
+        pageNumber = pageNumber + 1
+        retrieveServerStateArray(pageNumber: pageNumber)
+    }
+    
+}
